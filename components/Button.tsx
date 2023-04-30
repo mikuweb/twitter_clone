@@ -6,7 +6,7 @@ interface ButtonProps {
   fullWidth?: boolean;
   large?: boolean;
   onClick: () => void;
-  disabled: boolean;
+  disabled?: boolean;
   outline?: boolean;
 }
 const Button: React.FC<ButtonProps> = ({
@@ -41,7 +41,9 @@ const Button: React.FC<ButtonProps> = ({
   ${outline ? "border-white" : ""}
   ${outline ? "text-white" : ""}
   `}
-    ></button>
+    >
+      {label}
+    </button>
   );
 };
 
